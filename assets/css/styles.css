@@ -405,9 +405,6 @@ img {
 }
 
 
-
-
-
 /*==================== ABOUT ====================*/
 .about__img {
   width: 200px;
@@ -528,12 +525,28 @@ img {
   width: 80%;
 }
 
+.skills__spring {
+  width: 50%;
+}
+
 .skills__springboot {
   width: 50%;
 }
 
+.skills__hibernate {
+  width: 40%;
+}
+
+.skills__jdbc {
+  width: 40%;
+}
+
 .skills__mysql {
   width: 60%;
+}
+
+.skills__maven {
+  width: 40%;
 }
 
 .skills__aws {
