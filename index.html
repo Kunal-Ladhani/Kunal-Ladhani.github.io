@@ -42,6 +42,13 @@
 		<link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
 
 		<!--==================== CSS ====================-->
+
+		<!--==================== github calender.js CSS ====================-->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css" />
+
+		<!--==================== main CSS ====================-->
 		<link rel="stylesheet" href="/assets/css/styles.css" />
 	</head>
 
@@ -55,7 +62,8 @@
 		})();
 	</script>
 
-	<!--==================== GITHUB API INTEGRATION ====================-->
+	<!--==================== GITHUB-CALENDER.JS INTEGRATION ====================-->
+	<script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
 
 	<body>
 		<!--==================== HEADER ====================-->
@@ -80,18 +88,39 @@
 								Skills
 							</a>
 						</li>
-						<li class="nav__item">
-							<a href="#services" class="nav__link">
-								<i class="uil uil-briefcase-alt nav__icon"></i>
-								Services
-							</a>
-						</li>
+
 						<li class="nav__item">
 							<a href="#portfolio" class="nav__link">
 								<i class="uil uil-scenery nav__icon"></i>
 								Projects
 							</a>
 						</li>
+
+						<li class="nav__item">
+							<a
+								download="Kunal Ladhani Resume"
+								href="./assets/pdf/Kunal Ladhani Resume.pdf"
+								target="_blank"
+								class="nav__link">
+								<i class="uil uil-folder nav__icon"></i>
+								Resume
+							</a>
+						</li>
+
+						<li class="nav__item">
+							<a href="#services" class="nav__link">
+								<i class="uil uil-briefcase-alt nav__icon"></i>
+								Services
+							</a>
+						</li>
+
+						<li class="nav__item">
+							<a href="#github" class="nav__link">
+								<i class="uil uil-github nav__icon"></i>
+								Github stats
+							</a>
+						</li>
+
 						<li class="nav__item">
 							<a href="#contact" class="nav__link">
 								<i class="uil uil-message nav__icon"></i>
@@ -739,194 +768,6 @@
 				</div>
 			</section>
 
-			<!--==================== SERVICES ====================-->
-			<section class="services section" id="services">
-				<h2 class="section__title">Services</h2>
-				<span class="section__subtitle">What I offer</span>
-
-				<div class="services__container container grid">
-					<!--==================== SERVICES 1 ====================-->
-					<div class="services__content">
-						<div>
-							<i class="uil uil-web-grid services__icon"></i>
-							<h3 class="services__title">
-								Frontend <br />Developer
-							</h3>
-						</div>
-
-						<span
-							class="button button--flex button--small button--link services__button">
-							View More
-							<i class="uil uil-arrow-right button__icon"></i>
-						</span>
-
-						<div class="services__modal">
-							<div class="services__modal-content">
-								<h4 class="services__modal-title">
-									Frontend <br />
-									Developer
-								</h4>
-								<i
-									class="uil uil-times services__modal-close"></i>
-
-								<ul class="services__modal-services grid">
-									<li class="services__modal-service">
-										<i
-											class="uil uil-check-circle services__modal-icon"></i>
-										<p>I developed the user interface.</p>
-									</li>
-									<li class="services__modal-service">
-										<i
-											class="uil uil-check-circle services__modal-icon"></i>
-										<p>I develop the webpage or web app.</p>
-									</li>
-									<li class="services__modal-service">
-										<i
-											class="uil uil-check-circle services__modal-icon"></i>
-										<p>
-											I created the UX element
-											interactions.
-										</p>
-									</li>
-									<li class="services__modal-service">
-										<i
-											class="uil uil-check-circle services__modal-icon"></i>
-										<p>
-											Tech Stack - HTML, CSS, JavaScript.
-										</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<!--==================== SERVICES 2 ====================-->
-					<div class="services__content">
-						<div>
-							<i class="uil uil-arrow services__icon"></i>
-							<h3 class="services__title">
-								Backend <br />Developer
-							</h3>
-						</div>
-
-						<span
-							class="button button--flex button--small button--link services__button">
-							View More
-							<i class="uil uil-arrow-right button__icon"></i>
-						</span>
-
-						<div class="services__modal">
-							<div class="services__modal-content">
-								<h4 class="services__modal-title">
-									Backend <br />
-									Developer
-								</h4>
-								<i
-									class="uil uil-times services__modal-close"></i>
-
-								<ul class="services__modal-services grid">
-									<li class="services__modal-service">
-										<i
-											class="uil uil-check-circle services__modal-icon"></i>
-										<p>I developed the APIs.</p>
-									</li>
-									<li class="services__modal-service">
-										<i
-											class="uil uil-check-circle services__modal-icon"></i>
-										<p>
-											I do the high level system design.
-										</p>
-									</li>
-									<li class="services__modal-service">
-										<i
-											class="uil uil-check-circle services__modal-icon"></i>
-										<p>
-											I created the interactions between
-											classes (Low Level System Design).
-										</p>
-									</li>
-									<li class="services__modal-service">
-										<i
-											class="uil uil-check-circle services__modal-icon"></i>
-										<p>
-											I do the database design for the
-											project.
-										</p>
-									</li>
-									<li class="services__modal-service">
-										<i
-											class="uil uil-check-circle services__modal-icon"></i>
-										<p>
-											Tech Stack - Java, Spring Boot,
-											MySQL, AWS.
-										</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-
-					<!--==================== SERVICES 3 ====================-->
-					<div class="services__content">
-						<div>
-							<i class="uil uil-pen services__icon"></i>
-							<h3 class="services__title">
-								Teach Computer Science
-							</h3>
-						</div>
-
-						<span
-							class="button button--flex button--small button--link services__button">
-							View More
-							<i class="uil uil-arrow-right button__icon"></i>
-						</span>
-
-						<div class="services__modal">
-							<div class="services__modal-content">
-								<h4 class="services__modal-title">CS Tutor</h4>
-								<i
-									class="uil uil-times services__modal-close"></i>
-
-								<ul class="services__modal-services grid">
-									<li class="services__modal-service">
-										<i
-											class="uil uil-check-circle services__modal-icon"></i>
-										<p>
-											I teach Intro to Programming using
-											C++ or Java.
-										</p>
-									</li>
-									<li class="services__modal-service">
-										<i
-											class="uil uil-check-circle services__modal-icon"></i>
-										<p>
-											I teach Data Structures and
-											Algorithms.
-										</p>
-									</li>
-									<li class="services__modal-service">
-										<i
-											class="uil uil-check-circle services__modal-icon"></i>
-										<p>
-											CS Fundamentals - Object Oriented
-											Programming, Database Systems and
-											Operating Systems.
-										</p>
-									</li>
-									<li class="services__modal-service">
-										<i
-											class="uil uil-check-circle services__modal-icon"></i>
-										<p>
-											I can teach Web development using
-											HTML, CSS and JS too.
-										</p>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
 			<!--==================== PROJECT ====================-->
 			<section class="portfolio section" id="portfolio">
 				<h2 class="section__title">Projects</h2>
@@ -1181,11 +1022,202 @@
 				</div>
 			</section>
 
-			<!--==================== Github STATISTICS ====================-->
-			<section class="project section container">
+			<!--==================== SERVICES ====================-->
+			<section class="services section" id="services">
+				<h2 class="section__title">Services</h2>
+				<span class="section__subtitle">What I offer</span>
+
+				<div class="services__container container grid">
+					<!--==================== SERVICES 1 ====================-->
+					<div class="services__content">
+						<div>
+							<i class="uil uil-web-grid services__icon"></i>
+							<h3 class="services__title">
+								Frontend <br />Developer
+							</h3>
+						</div>
+
+						<span
+							class="button button--flex button--small button--link services__button">
+							View More
+							<i class="uil uil-arrow-right button__icon"></i>
+						</span>
+
+						<div class="services__modal">
+							<div class="services__modal-content">
+								<h4 class="services__modal-title">
+									Frontend <br />
+									Developer
+								</h4>
+								<i
+									class="uil uil-times services__modal-close"></i>
+
+								<ul class="services__modal-services grid">
+									<li class="services__modal-service">
+										<i
+											class="uil uil-check-circle services__modal-icon"></i>
+										<p>I developed the user interface.</p>
+									</li>
+									<li class="services__modal-service">
+										<i
+											class="uil uil-check-circle services__modal-icon"></i>
+										<p>I develop the webpage or web app.</p>
+									</li>
+									<li class="services__modal-service">
+										<i
+											class="uil uil-check-circle services__modal-icon"></i>
+										<p>
+											I created the UX element
+											interactions.
+										</p>
+									</li>
+									<li class="services__modal-service">
+										<i
+											class="uil uil-check-circle services__modal-icon"></i>
+										<p>
+											Tech Stack - HTML, CSS, JavaScript.
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!--==================== SERVICES 2 ====================-->
+					<div class="services__content">
+						<div>
+							<i class="uil uil-arrow services__icon"></i>
+							<h3 class="services__title">
+								Backend <br />Developer
+							</h3>
+						</div>
+
+						<span
+							class="button button--flex button--small button--link services__button">
+							View More
+							<i class="uil uil-arrow-right button__icon"></i>
+						</span>
+
+						<div class="services__modal">
+							<div class="services__modal-content">
+								<h4 class="services__modal-title">
+									Backend <br />
+									Developer
+								</h4>
+								<i
+									class="uil uil-times services__modal-close"></i>
+
+								<ul class="services__modal-services grid">
+									<li class="services__modal-service">
+										<i
+											class="uil uil-check-circle services__modal-icon"></i>
+										<p>I developed the APIs.</p>
+									</li>
+									<li class="services__modal-service">
+										<i
+											class="uil uil-check-circle services__modal-icon"></i>
+										<p>
+											I do the high level system design.
+										</p>
+									</li>
+									<li class="services__modal-service">
+										<i
+											class="uil uil-check-circle services__modal-icon"></i>
+										<p>
+											I created the interactions between
+											classes (Low Level System Design).
+										</p>
+									</li>
+									<li class="services__modal-service">
+										<i
+											class="uil uil-check-circle services__modal-icon"></i>
+										<p>
+											I do the database design for the
+											project.
+										</p>
+									</li>
+									<li class="services__modal-service">
+										<i
+											class="uil uil-check-circle services__modal-icon"></i>
+										<p>
+											Tech Stack - Java, Spring Boot,
+											MySQL, AWS.
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!--==================== SERVICES 3 ====================-->
+					<div class="services__content">
+						<div>
+							<i class="uil uil-pen services__icon"></i>
+							<h3 class="services__title">
+								Teach Computer Science
+							</h3>
+						</div>
+
+						<span
+							class="button button--flex button--small button--link services__button">
+							View More
+							<i class="uil uil-arrow-right button__icon"></i>
+						</span>
+
+						<div class="services__modal">
+							<div class="services__modal-content">
+								<h4 class="services__modal-title">CS Tutor</h4>
+								<i
+									class="uil uil-times services__modal-close"></i>
+
+								<ul class="services__modal-services grid">
+									<li class="services__modal-service">
+										<i
+											class="uil uil-check-circle services__modal-icon"></i>
+										<p>
+											I teach Intro to Programming using
+											C++ or Java.
+										</p>
+									</li>
+									<li class="services__modal-service">
+										<i
+											class="uil uil-check-circle services__modal-icon"></i>
+										<p>
+											I teach Data Structures and
+											Algorithms.
+										</p>
+									</li>
+									<li class="services__modal-service">
+										<i
+											class="uil uil-check-circle services__modal-icon"></i>
+										<p>
+											CS Fundamentals - Object Oriented
+											Programming, Database Systems and
+											Operating Systems.
+										</p>
+									</li>
+									<li class="services__modal-service">
+										<i
+											class="uil uil-check-circle services__modal-icon"></i>
+										<p>
+											I can teach Web development using
+											HTML, CSS and JS too.
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!--==================== GITHUB STATS ====================-->
+			<section class="project github section container" id="github">
 				<h2 class="section__title">GitHub Statistics</h2>
 				<span class="section__subtitle">Contributions I have made</span>
-				<a
+				<div class="calendar zoom">
+					<!-- GITHUB CALENDER GOES HERE -->
+				</div>
+				<!-- <a
 					target="_blank"
 					rel="noreferrer"
 					id="cicin"
@@ -1197,7 +1229,7 @@
 						src="https://ghchart.rshah.org/kunal-ladhani"
 						href="https://github.com/kunal-ladhani"
 						alt="kunal's github chart" />
-				</a>
+				</a> -->
 			</section>
 
 			<!--==================== TESTIMONIAL ====================-->
@@ -1502,3 +1534,11 @@
 		<script src="/assets/js/main.js"></script>
 	</body>
 </html>
+
+<!-- ================== GITHUB CALENDAR JS INTEGRATIONS ======================  -->
+<script>
+	GitHubCalendar(".calendar", "Kunal-Ladhani");
+
+	// or enable responsive functionality:
+	GitHubCalendar(".calendar", "Kunal-Ladhani", { responsive: true });
+</script>

@@ -1142,6 +1142,58 @@ img {
     align-items: center;
     justify-content: space-between;
   }
+
+  .calendar {
+    padding: 0rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto,1); 
+  }
+
+  .calendar > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0rem;
+    padding: 0rem;
+  }
+
+  .contrib-column,.text-muted,.contrib-number {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+}
+
+
+@media screen and (min-width:350px) and (max-width:568px) {
+  .calendar {
+    width: auto;
+    padding: 0rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto,2); 
+  }
+
+  .calendar > div {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0rem;
+    padding: 0rem;
+  }
+
+  .contrib-column,.text-muted,.contrib-number {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  
 }
 
 /* For medium devices */
@@ -1402,4 +1454,33 @@ img {
   .contact__inputs {
     grid-template-columns: repeat(2,1fr);
   }
+}
+
+/* GITHUB STATS */
+.calendar {
+  color: var(--hue-color);
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 3rem;
+  border-radius: 2rem;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.calendar > div {
+  padding-top: 3rem;
+  border: none;
+  color: var(--hue-color);
+}
+
+.calendar > div > span {
+  color: var(--hue-color);
+  font-weight: var(--font-medium);
+}
+
+.zoom {
+  transition: transform 0.8s;
+}
+
+.zoom:hover {
+  transform: scale(1.06);
 }
