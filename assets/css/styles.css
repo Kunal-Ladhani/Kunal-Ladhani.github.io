@@ -1458,7 +1458,8 @@ img {
 
 /* GITHUB STATS */
 .calendar {
-  color: var(--hue-color);
+  color: var(--text-color);
+  font-weight: var(--font-medium);
   padding-left: 2rem;
   padding-right: 2rem;
   padding-bottom: 3rem;
@@ -1483,4 +1484,44 @@ img {
 
 .zoom:hover {
   transform: scale(1.06);
+}
+
+.statistics {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  border-radius: 1.8rem;
+}
+
+#github-statistics {
+  border-radius: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  grid-template-rows: 1;
+  column-gap: 1.4rem;
+  /* border: 1px solid red; */
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 0rem;
+}
+
+#github-stat {
+  padding: 0%;
+  width: 25rem;
+  /* border : 1px solid green; */
+}
+#github-contribution {
+  padding: 0%;
+  width: 25rem;
+  /* border : 1px solid blue; */
+}
+
+#github-lang {
+  width: 23rem;
+  height: 90%;
+  /* border: 1px solid purple; */
+}
+
+#github-lang>img {
+  border-radius: 1.2rem;
+  border: none;
+  outline:none;
 }
