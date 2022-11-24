@@ -219,7 +219,16 @@ themeButton.addEventListener("click", () => {
 
 //  ================== GITHUB JS ======================
 
+const github = document.querySelector("#github");
+github.addEventListener("click", (event) => {
+	event.preventDefault();
+	window.open("https://github.com/Kunal-Ladhani", "_blank");
+});
+
+/**
+ * TODO: ADD DARK MODE FOR GITHUB STATS => add &theme=dracula for dark mode in src url
+ */
+
 const githubStat = document.querySelector("#github-statistics");
 const githubStatChildren = githubStat.childNodes;
-//githubStatChildren.forEach();
 console.log(githubStatChildren);
