@@ -1216,20 +1216,33 @@ img {
   }
 
   .calendar {
+    width:auto;
     padding: 0rem;
-    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto,1); 
+    grid-template-columns: repeat(1,auto);
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .calendar > div {
-    width: 100%;
+    width: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 0rem;
     padding: 0rem;
+    padding-top: 0.8rem; 
+    padding-bottom: 0.8rem;
   }
+
+  .calendar > div:first-child {
+    width: 100%;
+  }
+
 
   .contrib-column,.text-muted,.contrib-number {
     display: flex;
@@ -1280,11 +1293,17 @@ img {
 
 @media screen and (min-width:350px) and (max-width:568px) {
   .calendar {
-    width: auto;
+    width:auto;
     padding: 0rem;
-    margin: auto;
     display: grid;
-    grid-template-columns: repeat(auto,2); 
+    grid-template-columns: repeat(1,auto);
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
   }
 
   .calendar > div {
@@ -1292,8 +1311,13 @@ img {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 0rem;
     padding: 0rem;
+    padding-top: 0.8rem; 
+    padding-bottom: 0.8rem;
+  }
+
+  .calendar > div:first-child {
+    width: 100%;
   }
 
   .contrib-column,.text-muted,.contrib-number {
@@ -1316,6 +1340,7 @@ img {
     justify-content: center;
     column-gap: 1.4rem;
     row-gap: 1.4rem;
+    margin: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding: 0rem;
