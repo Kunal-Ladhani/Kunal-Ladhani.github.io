@@ -1,3 +1,17 @@
+//Function that executes on window load.
+window.onload = (event) => {
+	event.preventDefault();
+	localStorage.removeItem("selected-theme");
+	localStorage.removeItem("selected-icon");
+	let classList = document.body.classList;
+	//console.log(classList);
+
+	// if previously dark theme was selected then it will reload to default settings.
+	if (classList.length != 0) {
+		document.body.classList.remove("dark-theme");
+	}
+};
+
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById("nav-menu"),
 	navToggle = document.getElementById("nav-toggle"),
@@ -124,21 +138,6 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
 	},
 });
 
-/* ==================== EMAILJS INTEGRATION ==================== */
-let sendMail = () => {
-	let params = {
-		from_name: document.querySelector("#fullName").value,
-		email_id: document.querySelector("#emailId").value,
-		project: document.querySelector("#projectIdea").value,
-		message: document.querySelector("#message").value,
-	};
-
-	emailjs.send("service_hbtpu4r", "template_courklw", params).then((res) => {
-		alert("Success! Your Message has been sent to Kunal via an e-mail.");
-		window.location.reload();
-	});
-};
-
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll("section[id]");
 
@@ -181,6 +180,21 @@ function scrollUp() {
 }
 window.addEventListener("scroll", scrollUp);
 
+/* ==================== EMAILJS INTEGRATION ==================== */
+let sendMail = () => {
+	let params = {
+		from_name: document.querySelector("#fullName").value,
+		email_id: document.querySelector("#emailId").value,
+		project: document.querySelector("#projectIdea").value,
+		message: document.querySelector("#message").value,
+	};
+
+	emailjs.send("service_hbtpu4r", "template_courklw", params).then((res) => {
+		alert("Success! Your Message has been sent to Kunal via an e-mail.");
+		window.location.reload();
+	});
+};
+
 //  ================== GITHUB JS ======================
 
 const github = document.querySelector("#github");
@@ -194,7 +208,7 @@ github.addEventListener("click", (event) => {
  */
 
 let githubStats = document.querySelectorAll(".statistics.zoom");
-console.log(githubStats);
+//console.log(githubStats);
 
 /*==================== DARK LIGHT THEME ====================*/
 const themeButton = document.getElementById("theme-button");
@@ -233,20 +247,20 @@ themeButton.addEventListener("click", () => {
 
 	const currTheme = getCurrentTheme();
 	if (currTheme === "dark") {
-		console.log("dracula");
+		//console.log("dracula");
 		githubStats.forEach((stat) => {
 			let URL = stat.src.toString();
 			URL = URL.replace("default", "dracula");
 			stat.src = URL;
-			console.log(stat.getAttribute("src"));
+			//console.log(stat.getAttribute("src"));
 		});
 	} else if (currTheme === "light") {
-		console.log("default");
+		//console.log("default");
 		githubStats.forEach((stat) => {
 			let URL = stat.src.toString();
 			URL = URL.replace("dracula", "default");
 			stat.src = URL;
-			console.log(stat.getAttribute("src"));
+			//console.log(stat.getAttribute("src"));
 		});
 	}
 });
