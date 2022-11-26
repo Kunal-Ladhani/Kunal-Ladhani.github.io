@@ -181,6 +181,21 @@ function scrollUp() {
 }
 window.addEventListener("scroll", scrollUp);
 
+//  ================== GITHUB JS ======================
+
+const github = document.querySelector("#github");
+github.addEventListener("click", (event) => {
+	event.preventDefault();
+	window.open("https://github.com/Kunal-Ladhani", "_blank");
+});
+
+/**
+ * TODO: ADD DARK MODE FOR GITHUB STATS => add &theme=dracula for dark mode in src url
+ */
+
+let githubStats = document.querySelectorAll(".statistics.zoom");
+console.log(githubStats);
+
 /*==================== DARK LIGHT THEME ====================*/
 const themeButton = document.getElementById("theme-button");
 const darkTheme = "dark-theme";
@@ -215,20 +230,23 @@ themeButton.addEventListener("click", () => {
 	// We save the theme and the current icon that the user chose
 	localStorage.setItem("selected-theme", getCurrentTheme());
 	localStorage.setItem("selected-icon", getCurrentIcon());
+
+	const currTheme = getCurrentTheme();
+	if (currTheme === "dark") {
+		console.log("dracula");
+		githubStats.forEach((stat) => {
+			let URL = stat.src.toString();
+			URL = URL.replace("default", "dracula");
+			stat.src = URL;
+			console.log(stat.getAttribute("src"));
+		});
+	} else if (currTheme === "light") {
+		console.log("default");
+		githubStats.forEach((stat) => {
+			let URL = stat.src.toString();
+			URL = URL.replace("dracula", "default");
+			stat.src = URL;
+			console.log(stat.getAttribute("src"));
+		});
+	}
 });
-
-//  ================== GITHUB JS ======================
-
-const github = document.querySelector("#github");
-github.addEventListener("click", (event) => {
-	event.preventDefault();
-	window.open("https://github.com/Kunal-Ladhani", "_blank");
-});
-
-/**
- * TODO: ADD DARK MODE FOR GITHUB STATS => add &theme=dracula for dark mode in src url
- */
-
-const githubStat = document.querySelector("#github-statistics");
-const githubStatChildren = githubStat.childNodes;
-console.log(githubStatChildren);
